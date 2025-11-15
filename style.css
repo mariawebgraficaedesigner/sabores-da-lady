@@ -296,11 +296,13 @@ footer {
 /* ================================================= */
 
 @media (max-width: 768px) {
-  
-  /* ... (o código do .container, .hero h1, etc., continua aqui) ... */
 
+  /* Ajusta o espaçamento geral para celular */
+  .container {
+    padding: 50px 20px;
+  }
 
-  /* ----- 0. NAVEGAÇÃO (VERSÃO COMPACTA) ----- */
+  /* ----- 0. NAVEGAÇÃO (COMPACTA) ----- */
   .navbar {
     flex-direction: column; /* Empilha (logo em cima, links embaixo) */
     justify-content: center; /* Centraliza */
@@ -309,7 +311,6 @@ footer {
   }
 
   .nav-logo {
-    /* Diminui drasticamente a fonte do logo no celular */
     font-size: 1.3rem; 
     text-align: center; 
   }
@@ -323,26 +324,32 @@ footer {
   }
   
   .nav-links a {
-    /* Diminui drasticamente a fonte dos links */
     font-size: 0.8rem; 
     font-weight: 500;
   }
   
   .nav-cta {
-    /* Ajusta o padding do botão para ficar pequeno */
     padding: 6px 10px;
-    font-size: 0.8rem; /* Mesmo tamanho dos outros links */
+    font-size: 0.8rem;
   }
-  
-  /* ... (o resto do seu código de responsividade continua) ... */
 
-}
+
+  /* ----- 1. HERO ----- */
+  .hero h1 {
+    font-size: 2.5rem; /* Diminui o título principal */
+  }
+  .hero p {
+    font-size: 1.2rem; /* Diminui o subtítulo */
+  }
+
   /* ----- 2. SOBRE / DIFERENCIAIS ----- */
   .sobre-conteudo {
     flex-direction: column; /* Empilha a foto e o texto */
   }
+  
   .diferenciais-grid {
     flex-direction: column; /* Empilha os 3 diferenciais */
+    gap: 25px;
   }
 
   /* ----- 3. SERVIÇOS (Cards) ----- */
@@ -364,7 +371,7 @@ footer {
 
   /* ----- 7. FAQ ----- */
   .faq details {
-    text-align: left; /* Garante que o texto não fique centralizado */
+    text-align: left;
   }
 
   /* ----- 8. ORÇAMENTO (Formulário) ----- */
@@ -373,14 +380,12 @@ footer {
     gap: 15px;
   }
   
-  /* Faz os campos (que eram 50%) ocuparem 100% da largura */
   .contato .form-linha > * {
-    width: 100%;
+    width: 100% !important; /* Força os campos a ter 100% */
   }
   
-  /* Ajusta o campo de data, que pode bugar */
   .contato .form-linha input[type="date"] {
-    width: 100%;
+    width: 100% !important;
   }
 
 }
