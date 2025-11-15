@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabores da Lady - Eventos Especiais</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="#inicio" class="nav-logo">Sabores da Lady</a>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#cardapio">Cardápio</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#orcamento" class="nav-cta">Orçamento</a></li>
+    </ul>
+  </nav>
+
+  <header id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>Sabores da Lady</h1>
+      <p>Transformamos amor em sabor</p>
+      <a href="#orcamento" class="cta-button">Solicite um Orçamento Imediato</a>
+    </div>
+  </header>
+
+ <section id="sobre" class="sobre container">
+    <div class="sobre-conteudo">
+        
+        <div class="sobre-texto">
+            <h2>Quem Somos</h2>
+            <p>A Sabores da Lady é uma marca que nasceu do desejo de levar experiências gastronômicas marcantes, onde cada detalhe é preparado com amor, cuidado e dedicação.</p>
+            <p>Mais do que cozinhar, acreditamos em transformar momentos simples em memórias afetivas. Cada prato é feito com atenção aos detalhes, respeitando o tempo, o ingrediente e o cliente.</p>
+        </div>
+        
+        <div class="sobre-imagem">
+            <img src="imagens/cabana.jpeg" alt="Lediane no stand da Sabores da Lady">
+        </div>
+        
+    </div>
+    
+    <div class="diferenciais-grid">
+        <div class="diferencial-item">
+            <span class="icone">✓</span>
+            <h3>Atendimento com Afeto</h3>
+            <p>Atendimento com afeto e dedicação em cada detalhe.</p>
+        </div>
+        <div class="diferencial-item">
+            <span class="icone">✓</span>
+            <h3>Culinária Artesanal</h3>
+            <p>Culinária artesanal com um inconfundível toque caseiro.</p>
+        </div>
+        <div class="diferencial-item">
+            <span class="icone">✓</span>
+            <h3>Eventos Personalizados</h3>
+            <p>Buffet, doces e salgados sob medida para seu evento.</p>
+        </div>
+    </div>
+</section>
+  
+ <section id="cardapio" class="cardapio container">
+  <h2>Amostras do Cardápio</h2>
+  <p class="subtitulo">Conheça alguns dos nossos sabores de empadas artesanais.</p>
+  
+  <div class="cardapio-grid">
+    
+    <div class="menu-coluna">
+      <h4>Empadas Salgadas</h4>
+      <ul>
+        <li>Frango</li>
+        <li>Camarão</li>
+        <li>Camarão com Jambu</li>
+        <li>Quatro Queijos</li>
+      </ul>
+    </div>
+    
+    <div class="menu-coluna">
+      <h4>Empadas Doces</h4>
+      <ul>
+        <li>Cupuaçu</li>
+        <li>Napolitano</li>
+        <li>Prestígio</li>
+      </ul>
+    </div>
+    
+  </div>
+</section>
+ <section id="galeria" class="galeria container">
+    <h2>Nossos Pratos e Decorações</h2>
+    <div class="galeria-grid">
+      
+      <img src="imagens/empada.jpeg" alt="Empadas assando no forno">
+      
+      <img src="imagens/biscoito.jpeg" alt="Biscoitos caseiros Sabores da Lady">
+      
+      <video width="100%" controls>
+        <source src="imagens/copo.mp4" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+      </video>
+      
+    </div>
+</section>
+  
+  <section id="depoimentos" class="depoimentos container">
+    <h2>O que nossos clientes dizem</h2>
+    <div class="depoimento-item">
+      <blockquote>"Gostei muito da empada, muitooo gostosa! Logo quero de novo. Desejo ótimas vendas!"</blockquote>
+      <cite>-Cliente Rose</cite>
+    </div>
+  </section>
+
+  <section id="faq" class="faq container">
+    <h2>Perguntas Frequentes</h2>
+    <details>
+      <summary>Vocês atendem em quais cidades?</summary>
+      <p>Atendemos em Ananindeua. Para outras localidades, entre em contato para consulta.</p>
+    </details>
+    <details>
+      <summary>Com quanta antecedência preciso reservar?</summary>
+      <p>Recomendamos o mínimo de 30 dias de antecedência para garantir a sua data.</p>
+    </details>
+    <details>
+      <summary>As bebidas estão inclusas?</summary>
+      <p>Não. Nossos pacotes de buffet não incluem bebidas, permitindo que você escolha as opções que preferir por fora.</p>
+    </details>
+  </section>
+
+  <section id="orcamento" class="contato container">
+    <h2>Solicite um Orçamento</h2>
+    <p class="subtitulo">Levar amor à mesa e encantamento a cada sabor. Cuidar de cada detalhe para que o momento seja inesquecível..</p>
+    
+    <form action="https://formspree.io/f/mwpalzjr" method="POST">
+      <div class="form-linha">
+        <input type="text" name="Nome" placeholder="Seu Nome Completo" required>
+        <input type="tel" name="Telefone" placeholder="Seu WhatsApp (com DDD)" required>
+      </div>
+      <div class="form-linha">
+        <input type="email" name="Email" placeholder="Seu melhor e-mail" required>
+        <input type="text" name="Local do Evento" placeholder="Local (Salão, Casa, etc.)" required>
+      </div>
+      <div class="form-linha">
+        <select name="Tipo de Evento" required>
+          <option value="">Tipo de Evento</option>
+          <option value="Casamento">Casamento</option>
+          <option value="Aniversário">Aniversário</option>
+          <option value="Corporativo">Corporativo</option>
+          <option value="Outro">Outro</option>
+        </select>
+        <input type="date" name="Data do Evento" required>
+        <input type_="number" name="Nº de Convidados" placeholder="Nº de Convidados" required>
+      </div>
+      <textarea name="Mensagem" placeholder="Fale um pouco sobre o que você precisa... (Ex: tipo de comida, horários, etc)" rows="6"></textarea>
+      
+      <button type="submit" class="cta-button">Pedir Orçamento Agora</button>
+    </form>
+  </section>
+
+  <footer>
+    <p class="creditos">Desenvolvido por Maria Luciana | Web & Gráfica Designer</p>
+  </footer>
+
+</body>
+</html>

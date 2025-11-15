@@ -1,0 +1,361 @@
+/* ----- VARIÁVEIS DE DESIGN (Paleta "Sabores da Lady") ----- */
+:root {
+  /* Fundo principal: O Off-white da paleta */
+  --cor-fundo: #F6F3EE;       
+  
+  /* Cor de Texto: O Marrom. É escuro o suficiente para ler e elegante. */
+  --cor-texto: #AD795B;       
+  
+  /* Destaque Principal: O Laranja/Bege. Usar em botões e links. */
+  --cor-destaque: #E9BC8B;    
+  
+  /* Destaque Secundário: O Rosa "bem de leve". Usar em detalhes. */
+  --cor-rosa-suave: #FCCDCS;  
+  
+  /* Fundo de Seção (Opcional): Um branco puro para criar contraste */
+  --cor-fundo-secao: #FFFFFF; 
+  
+  --fonte-titulo: 'Merriweather', serif;
+  --fonte-texto: 'Montserrat', sans-serif;
+}
+
+/* ----- RESET E PADRÕES ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--fonte-texto);
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.subtitulo {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+.cta-button {
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto);
+  padding: 15px 30px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+.cta-button:hover { opacity: 0.9; }
+
+/* ----- 0. NAVEGAÇÃO ----- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.nav-logo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--cor-texto);
+  text-decoration: none;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Menor espaço para caber mais links */
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--cor-texto);
+  font-weight: bold;
+  font-size: 0.9rem; /* Fonte menor */
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--cor-destaque); }
+.nav-cta {
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto) !important;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+.nav-cta:hover { color: var(--cor-texto) !important; opacity: 0.9; }
+
+/* ----- 1. INÍCIO (HERO) ----- */
+.hero {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://placehold.co/1920x1080?text=Buffet+Elegante'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+.hero h1 {
+  font-family: var(--fonte-titulo);
+  font-size: 3.5rem;
+}
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* ----- 2. SOBRE / DIFERENCIAIS ----- */
+
+/* NOVO BLOCO: Para alinhar a foto e o texto */
+.sobre-conteudo {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  gap: 40px; /* Espaço entre a foto e o texto */
+  margin-bottom: 60px; /* Espaço antes da grade de diferenciais */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* O texto agora ocupa metade do espaço */
+.sobre-texto {
+  flex: 1; /* O '1' faz ele crescer e ocupar o espaço */
+  line-height: 1.6;
+}
+
+/* A imagem ocupa a outra metade */
+.sobre-imagem {
+  flex: 1;
+}
+
+.sobre-imagem img {
+  width: 100%; /* Faz a imagem ocupar todo o espaço da coluna dela */
+  border-radius: 5px; /* Borda suave */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+
+/* O código dos diferenciais (que você já tinha) continua igual */
+.diferenciais-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+.diferencial-item {
+  flex-basis: 30%;
+  padding: 20px;
+}
+.diferencial-item .icone {
+  font-size: 2rem;
+  color: var(--cor-rosa-suave); /* Usando o rosa que definimos */
+}
+.diferencial-item h3 {
+  font-family: var(--fonte-titulo);
+  margin: 10px 0;
+}
+
+/* Na seção 4. CARDÁPIO */
+.menu-coluna h4 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  color: var(--cor-texto); /* Deixa o texto normal */
+  border-bottom: 2px solid var(--cor-rosa-suave); /* <-- MUDANÇA AQUI */
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+/* ----- 5. GALERIA ----- */
+.galeria {
+  background-color: var(--cor-fundo-secao);
+}
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.galeria-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.galeria-grid video {
+  width: 100%;
+  height: 250px; /* A MESMA altura das imagens */
+  object-fit: cover; /* Força o vídeo a cobrir o espaço, igual às imagens */
+  border-radius: 5px;
+}
+
+/* Na seção 6. DEPOIMENTOS */
+.depoimentos blockquote {
+  font-family: var(--fonte-titulo);
+  font-style: italic;
+  font-size: 1.3rem;
+  border-left: 5px solid var(--cor-rosa-suave); /* <-- MUDANÇA AQUI */
+  padding-left: 15px;
+  text-align: left;
+}
+.depoimentos cite {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 20px;
+  color: var(--cor-rosa-suave); /* <-- MUDANÇA SUTIL AQUI */
+}
+/* ----- 7. FAQ (Perguntas Frequentes) ----- */
+.faq {
+  background-color: var(--cor-fundo-secao);
+}
+.faq details {
+  max-width: 800px;
+  margin: 0 auto 10px auto;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  text-align: left;
+}
+.faq summary {
+  padding: 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  outline: none;
+}
+.faq details[open] summary {
+  color: var(--cor-destaque);
+}
+.faq p {
+  padding: 0 15px 15px 15px;
+  line-height: 1.6;
+}
+
+/* ----- 8. ORÇAMENTO ----- */
+.contato form {
+  max-width: 900px; /* Mais largo */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contato .form-linha {
+  display: flex;
+  gap: 15px;
+}
+.contato .form-linha > * { /* Faz todos os itens da linha crescerem igual */
+  flex: 1;
+}
+.contato input, .contato select, .contato textarea {
+  width: 100%;
+  padding: 15px;
+  font-family: var(--fonte-texto);
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* ----- RODAPÉ ----- */
+footer {
+  padding: 30px;
+  text-align: center;
+  background-color: var(--cor-texto);
+  color: var(--cor-fundo);
+}
+/* ================================================= */
+/* ----- 9. RESPONSIVIDADE (CELULAR) ----- */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+  /* Ajusta o espaçamento geral para celular */
+  .container {
+    padding: 40px 20px;
+  }
+
+  /* ----- 0. NAVEGAÇÃO ----- */
+  .navbar {
+    flex-direction: column; /* Empilha o logo e os links */
+    padding: 15px;
+  }
+  .nav-links {
+    flex-direction: column; /* Empilha os links do menu */
+    gap: 10px;
+    margin-top: 15px;
+    align-items: center; /* Centraliza os links empilhados */
+  }
+
+  /* ----- 1. HERO ----- */
+  .hero h1 {
+    font-size: 2.5rem; /* Diminui o título principal */
+  }
+  .hero p {
+    font-size: 1.2rem; /* Diminui o subtítulo */
+  }
+
+  /* ----- 2. SOBRE / DIFERENCIAIS ----- */
+  .sobre-conteudo {
+    flex-direction: column; /* Empilha a foto e o texto */
+  }
+  .diferenciais-grid {
+    flex-direction: column; /* Empilha os 3 diferenciais */
+  }
+
+  /* ----- 3. SERVIÇOS (Cards) ----- */
+  .cards-container {
+    flex-direction: column; /* Empilha os 3 cards de serviço */
+    gap: 15px;
+  }
+
+  /* ----- 4. CARDÁPIO ----- */
+  .cardapio-grid {
+    flex-direction: column; /* Empilha as 2 colunas do cardápio */
+  }
+
+  /* ----- 5. GALERIA ----- */
+  .galeria-grid {
+    grid-template-columns: 1fr 1fr; /* Muda de 3 para 2 colunas */
+    gap: 10px;
+  }
+
+  /* ----- 7. FAQ ----- */
+  .faq details {
+    text-align: left; /* Garante que o texto não fique centralizado */
+  }
+
+  /* ----- 8. ORÇAMENTO (Formulário) ----- */
+  .contato .form-linha {
+    flex-direction: column; /* Empilha os campos (ex: Nome e Telefone) */
+    gap: 15px;
+  }
+  
+  /* Faz os campos (que eram 50%) ocuparem 100% da largura */
+  .contato .form-linha > * {
+    width: 100%;
+  }
+  
+  /* Ajusta o campo de data, que pode bugar */
+  .contato .form-linha input[type="date"] {
+    width: 100%;
+  }
+
+}
