@@ -291,43 +291,52 @@ footer {
   .container {
     padding: 40px 20px;
   }
-/* ----- 0. NAVEGAÇÃO (CÓDIGO NOVO) ----- */
+/* ================================================= */
+/* ----- 9. RESPONSIVIDADE (CELULAR) ----- */
+/* ================================================= */
+
+@media (max-width: 768px) {
+  
+  /* ... (o código do .container, .hero h1, etc., continua aqui) ... */
+
+
+  /* ----- 0. NAVEGAÇÃO (VERSÃO COMPACTA) ----- */
   .navbar {
-    /* Em vez de empilhar, vamos "quebrar a linha" */
-    flex-wrap: wrap;
-    /* Centraliza os blocos */
-    justify-content: center; 
-    padding: 20px 15px;
-    gap: 15px; /* Adiciona um espaço caso quebre */
+    flex-direction: column; /* Empilha (logo em cima, links embaixo) */
+    justify-content: center; /* Centraliza */
+    padding: 15px 10px; /* Menos preenchimento */
+    gap: 15px; /* Espaço entre o logo e o bloco de links */
   }
 
   .nav-logo {
-    /* Faz o logo ocupar 100% da largura (linha 1) */
-    width: 100%;
-    /* Centraliza o texto do logo */
+    /* Diminui drasticamente a fonte do logo no celular */
+    font-size: 1.3rem; 
     text-align: center; 
   }
 
   .nav-links {
-    /* Remove o 'margin-top' anterior */
     margin-top: 0; 
-    /* Deixa os links em linha (row) */
-    flex-direction: row; 
-    /* Permite que os links quebrem para a linha de baixo */
-    flex-wrap: wrap; 
-    /* Centraliza os links que quebraram */
-    justify-content: center; 
-    gap: 15px; /* Espaço entre cada link */
+    flex-direction: row; /* Mantém os links em linha */
+    flex-wrap: wrap; /* Deixa quebrar a linha se não couber */
+    justify-content: center; /* Centraliza os links */
+    gap: 5px 15px; /* Espaço (vertical, horizontal) entre os links */
   }
+  
+  .nav-links a {
+    /* Diminui drasticamente a fonte dos links */
+    font-size: 0.8rem; 
+    font-weight: 500;
+  }
+  
+  .nav-cta {
+    /* Ajusta o padding do botão para ficar pequeno */
+    padding: 6px 10px;
+    font-size: 0.8rem; /* Mesmo tamanho dos outros links */
+  }
+  
+  /* ... (o resto do seu código de responsividade continua) ... */
 
-  /* ----- 1. HERO ----- */
-  .hero h1 {
-    font-size: 2.5rem; /* Diminui o título principal */
-  }
-  .hero p {
-    font-size: 1.2rem; /* Diminui o subtítulo */
-  }
-
+}
   /* ----- 2. SOBRE / DIFERENCIAIS ----- */
   .sobre-conteudo {
     flex-direction: column; /* Empilha a foto e o texto */
@@ -373,6 +382,5 @@ footer {
   .contato .form-linha input[type="date"] {
     width: 100%;
   }
-
 
 }
