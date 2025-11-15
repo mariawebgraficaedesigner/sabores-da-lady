@@ -291,7 +291,34 @@ footer {
   .container {
     padding: 40px 20px;
   }
+/* ----- 0. NAVEGAÇÃO (CÓDIGO NOVO) ----- */
+  .navbar {
+    /* Em vez de empilhar, vamos "quebrar a linha" */
+    flex-wrap: wrap;
+    /* Centraliza os blocos */
+    justify-content: center; 
+    padding: 20px 15px;
+    gap: 15px; /* Adiciona um espaço caso quebre */
+  }
 
+  .nav-logo {
+    /* Faz o logo ocupar 100% da largura (linha 1) */
+    width: 100%;
+    /* Centraliza o texto do logo */
+    text-align: center; 
+  }
+
+  .nav-links {
+    /* Remove o 'margin-top' anterior */
+    margin-top: 0; 
+    /* Deixa os links em linha (row) */
+    flex-direction: row; 
+    /* Permite que os links quebrem para a linha de baixo */
+    flex-wrap: wrap; 
+    /* Centraliza os links que quebraram */
+    justify-content: center; 
+    gap: 15px; /* Espaço entre cada link */
+  }
   /* ----- 0. NAVEGAÇÃO ----- */
   .navbar {
     flex-direction: column; /* Empilha o logo e os links */
