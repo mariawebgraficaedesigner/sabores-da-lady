@@ -319,17 +319,6 @@ footer {
     justify-content: center; 
     gap: 15px; /* Espaço entre cada link */
   }
-  /* ----- 0. NAVEGAÇÃO ----- */
-  .navbar {
-    flex-direction: column; /* Empilha o logo e os links */
-    padding: 15px;
-  }
-  .nav-links {
-    flex-direction: column; /* Empilha os links do menu */
-    gap: 10px;
-    margin-top: 15px;
-    align-items: center; /* Centraliza os links empilhados */
-  }
 
   /* ----- 1. HERO ----- */
   .hero h1 {
@@ -384,5 +373,6 @@ footer {
   .contato .form-linha input[type="date"] {
     width: 100%;
   }
+
 
 }
